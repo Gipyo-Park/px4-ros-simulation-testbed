@@ -1,0 +1,8 @@
+prefix=/home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/devel
+
+Name: flight_data_collection_100hz_conver_to_c
+Description: Description of flight_data_collection_100hz_conver_to_c
+Version: 1.0.0
+Cflags: -I/home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_100hz_conver_to_c/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs roscpp sensor_msgs std_msgs

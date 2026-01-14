@@ -1,0 +1,288 @@
+#include "slros_busmsg_conversion.h"
+
+
+// Conversions between SL_Bus_flight_data_collection_20_Point_rwvn0l and geometry_msgs::Point
+
+void convertFromBus(geometry_msgs::Point* msgPtr, SL_Bus_flight_data_collection_20_Point_rwvn0l const* busPtr)
+{
+  const std::string rosMessageType("geometry_msgs/Point");
+
+  msgPtr->x =  busPtr->X;
+  msgPtr->y =  busPtr->Y;
+  msgPtr->z =  busPtr->Z;
+}
+
+void convertToBus(SL_Bus_flight_data_collection_20_Point_rwvn0l* busPtr, geometry_msgs::Point const* msgPtr)
+{
+  const std::string rosMessageType("geometry_msgs/Point");
+
+  busPtr->X =  msgPtr->x;
+  busPtr->Y =  msgPtr->y;
+  busPtr->Z =  msgPtr->z;
+}
+
+
+// Conversions between SL_Bus_flight_data_collection_20_Pose_oay37o and geometry_msgs::Pose
+
+void convertFromBus(geometry_msgs::Pose* msgPtr, SL_Bus_flight_data_collection_20_Pose_oay37o const* busPtr)
+{
+  const std::string rosMessageType("geometry_msgs/Pose");
+
+  convertFromBus(&msgPtr->orientation, &busPtr->Orientation);
+  convertFromBus(&msgPtr->position, &busPtr->Position);
+}
+
+void convertToBus(SL_Bus_flight_data_collection_20_Pose_oay37o* busPtr, geometry_msgs::Pose const* msgPtr)
+{
+  const std::string rosMessageType("geometry_msgs/Pose");
+
+  convertToBus(&busPtr->Orientation, &msgPtr->orientation);
+  convertToBus(&busPtr->Position, &msgPtr->position);
+}
+
+
+// Conversions between SL_Bus_flight_data_collection_20_PoseStamped_cwoda2 and geometry_msgs::PoseStamped
+
+void convertFromBus(geometry_msgs::PoseStamped* msgPtr, SL_Bus_flight_data_collection_20_PoseStamped_cwoda2 const* busPtr)
+{
+  const std::string rosMessageType("geometry_msgs/PoseStamped");
+
+  convertFromBus(&msgPtr->header, &busPtr->Header);
+  convertFromBus(&msgPtr->pose, &busPtr->Pose);
+}
+
+void convertToBus(SL_Bus_flight_data_collection_20_PoseStamped_cwoda2* busPtr, geometry_msgs::PoseStamped const* msgPtr)
+{
+  const std::string rosMessageType("geometry_msgs/PoseStamped");
+
+  convertToBus(&busPtr->Header, &msgPtr->header);
+  convertToBus(&busPtr->Pose, &msgPtr->pose);
+}
+
+
+// Conversions between SL_Bus_flight_data_collection_20_Quaternion_o1s7t5 and geometry_msgs::Quaternion
+
+void convertFromBus(geometry_msgs::Quaternion* msgPtr, SL_Bus_flight_data_collection_20_Quaternion_o1s7t5 const* busPtr)
+{
+  const std::string rosMessageType("geometry_msgs/Quaternion");
+
+  msgPtr->w =  busPtr->W;
+  msgPtr->x =  busPtr->X;
+  msgPtr->y =  busPtr->Y;
+  msgPtr->z =  busPtr->Z;
+}
+
+void convertToBus(SL_Bus_flight_data_collection_20_Quaternion_o1s7t5* busPtr, geometry_msgs::Quaternion const* msgPtr)
+{
+  const std::string rosMessageType("geometry_msgs/Quaternion");
+
+  busPtr->W =  msgPtr->w;
+  busPtr->X =  msgPtr->x;
+  busPtr->Y =  msgPtr->y;
+  busPtr->Z =  msgPtr->z;
+}
+
+
+// Conversions between SL_Bus_flight_data_collection_20_Twist_rz7xek and geometry_msgs::Twist
+
+void convertFromBus(geometry_msgs::Twist* msgPtr, SL_Bus_flight_data_collection_20_Twist_rz7xek const* busPtr)
+{
+  const std::string rosMessageType("geometry_msgs/Twist");
+
+  convertFromBus(&msgPtr->angular, &busPtr->Angular);
+  convertFromBus(&msgPtr->linear, &busPtr->Linear);
+}
+
+void convertToBus(SL_Bus_flight_data_collection_20_Twist_rz7xek* busPtr, geometry_msgs::Twist const* msgPtr)
+{
+  const std::string rosMessageType("geometry_msgs/Twist");
+
+  convertToBus(&busPtr->Angular, &msgPtr->angular);
+  convertToBus(&busPtr->Linear, &msgPtr->linear);
+}
+
+
+// Conversions between SL_Bus_flight_data_collection_20_TwistStamped_silrfq and geometry_msgs::TwistStamped
+
+void convertFromBus(geometry_msgs::TwistStamped* msgPtr, SL_Bus_flight_data_collection_20_TwistStamped_silrfq const* busPtr)
+{
+  const std::string rosMessageType("geometry_msgs/TwistStamped");
+
+  convertFromBus(&msgPtr->header, &busPtr->Header);
+  convertFromBus(&msgPtr->twist, &busPtr->Twist);
+}
+
+void convertToBus(SL_Bus_flight_data_collection_20_TwistStamped_silrfq* busPtr, geometry_msgs::TwistStamped const* msgPtr)
+{
+  const std::string rosMessageType("geometry_msgs/TwistStamped");
+
+  convertToBus(&busPtr->Header, &msgPtr->header);
+  convertToBus(&busPtr->Twist, &msgPtr->twist);
+}
+
+
+// Conversions between SL_Bus_flight_data_collection_20_Vector3_cscv97 and geometry_msgs::Vector3
+
+void convertFromBus(geometry_msgs::Vector3* msgPtr, SL_Bus_flight_data_collection_20_Vector3_cscv97 const* busPtr)
+{
+  const std::string rosMessageType("geometry_msgs/Vector3");
+
+  msgPtr->x =  busPtr->X;
+  msgPtr->y =  busPtr->Y;
+  msgPtr->z =  busPtr->Z;
+}
+
+void convertToBus(SL_Bus_flight_data_collection_20_Vector3_cscv97* busPtr, geometry_msgs::Vector3 const* msgPtr)
+{
+  const std::string rosMessageType("geometry_msgs/Vector3");
+
+  busPtr->X =  msgPtr->x;
+  busPtr->Y =  msgPtr->y;
+  busPtr->Z =  msgPtr->z;
+}
+
+
+// Conversions between SL_Bus_flight_data_collection_20_Time_81z42d and ros::Time
+
+void convertFromBus(ros::Time* msgPtr, SL_Bus_flight_data_collection_20_Time_81z42d const* busPtr)
+{
+  const std::string rosMessageType("ros_time/Time");
+
+  msgPtr->nsec =  busPtr->Nsec;
+  msgPtr->sec =  busPtr->Sec;
+}
+
+void convertToBus(SL_Bus_flight_data_collection_20_Time_81z42d* busPtr, ros::Time const* msgPtr)
+{
+  const std::string rosMessageType("ros_time/Time");
+
+  busPtr->Nsec =  msgPtr->nsec;
+  busPtr->Sec =  msgPtr->sec;
+}
+
+
+// Conversions between SL_Bus_flight_data_collection_20_Imu_ywzqgu and sensor_msgs::Imu
+
+void convertFromBus(sensor_msgs::Imu* msgPtr, SL_Bus_flight_data_collection_20_Imu_ywzqgu const* busPtr)
+{
+  const std::string rosMessageType("sensor_msgs/Imu");
+
+  convertFromBus(&msgPtr->angular_velocity, &busPtr->AngularVelocity);
+  convertFromBusFixedPrimitiveArray(msgPtr->angular_velocity_covariance, busPtr->AngularVelocityCovariance);
+  convertFromBus(&msgPtr->header, &busPtr->Header);
+  convertFromBus(&msgPtr->linear_acceleration, &busPtr->LinearAcceleration);
+  convertFromBusFixedPrimitiveArray(msgPtr->linear_acceleration_covariance, busPtr->LinearAccelerationCovariance);
+  convertFromBus(&msgPtr->orientation, &busPtr->Orientation);
+  convertFromBusFixedPrimitiveArray(msgPtr->orientation_covariance, busPtr->OrientationCovariance);
+}
+
+void convertToBus(SL_Bus_flight_data_collection_20_Imu_ywzqgu* busPtr, sensor_msgs::Imu const* msgPtr)
+{
+  const std::string rosMessageType("sensor_msgs/Imu");
+
+  convertToBus(&busPtr->AngularVelocity, &msgPtr->angular_velocity);
+  convertToBusFixedPrimitiveArray(busPtr->AngularVelocityCovariance, msgPtr->angular_velocity_covariance, slros::NoopWarning());
+  convertToBus(&busPtr->Header, &msgPtr->header);
+  convertToBus(&busPtr->LinearAcceleration, &msgPtr->linear_acceleration);
+  convertToBusFixedPrimitiveArray(busPtr->LinearAccelerationCovariance, msgPtr->linear_acceleration_covariance, slros::NoopWarning());
+  convertToBus(&busPtr->Orientation, &msgPtr->orientation);
+  convertToBusFixedPrimitiveArray(busPtr->OrientationCovariance, msgPtr->orientation_covariance, slros::NoopWarning());
+}
+
+
+// Conversions between SL_Bus_flight_data_collection_20_Float64_gj0fpw and std_msgs::Float64
+
+void convertFromBus(std_msgs::Float64* msgPtr, SL_Bus_flight_data_collection_20_Float64_gj0fpw const* busPtr)
+{
+  const std::string rosMessageType("std_msgs/Float64");
+
+  msgPtr->data =  busPtr->Data;
+}
+
+void convertToBus(SL_Bus_flight_data_collection_20_Float64_gj0fpw* busPtr, std_msgs::Float64 const* msgPtr)
+{
+  const std::string rosMessageType("std_msgs/Float64");
+
+  busPtr->Data =  msgPtr->data;
+}
+
+
+// Conversions between SL_Bus_flight_data_collection_20_Float64MultiArray_lxkfqk and std_msgs::Float64MultiArray
+
+void convertFromBus(std_msgs::Float64MultiArray* msgPtr, SL_Bus_flight_data_collection_20_Float64MultiArray_lxkfqk const* busPtr)
+{
+  const std::string rosMessageType("std_msgs/Float64MultiArray");
+
+  convertFromBusVariablePrimitiveArray(msgPtr->data, busPtr->Data, busPtr->Data_SL_Info);
+  convertFromBus(&msgPtr->layout, &busPtr->Layout);
+}
+
+void convertToBus(SL_Bus_flight_data_collection_20_Float64MultiArray_lxkfqk* busPtr, std_msgs::Float64MultiArray const* msgPtr)
+{
+  const std::string rosMessageType("std_msgs/Float64MultiArray");
+
+  convertToBusVariablePrimitiveArray(busPtr->Data, busPtr->Data_SL_Info, msgPtr->data, slros::EnabledWarning(rosMessageType, "data"));
+  convertToBus(&busPtr->Layout, &msgPtr->layout);
+}
+
+
+// Conversions between SL_Bus_flight_data_collection_20_Header_sv1dqr and std_msgs::Header
+
+void convertFromBus(std_msgs::Header* msgPtr, SL_Bus_flight_data_collection_20_Header_sv1dqr const* busPtr)
+{
+  const std::string rosMessageType("std_msgs/Header");
+
+  convertFromBusVariablePrimitiveArray(msgPtr->frame_id, busPtr->FrameId, busPtr->FrameId_SL_Info);
+  msgPtr->seq =  busPtr->Seq;
+  convertFromBus(&msgPtr->stamp, &busPtr->Stamp);
+}
+
+void convertToBus(SL_Bus_flight_data_collection_20_Header_sv1dqr* busPtr, std_msgs::Header const* msgPtr)
+{
+  const std::string rosMessageType("std_msgs/Header");
+
+  convertToBusVariablePrimitiveArray(busPtr->FrameId, busPtr->FrameId_SL_Info, msgPtr->frame_id, slros::EnabledWarning(rosMessageType, "frame_id"));
+  busPtr->Seq =  msgPtr->seq;
+  convertToBus(&busPtr->Stamp, &msgPtr->stamp);
+}
+
+
+// Conversions between SL_Bus_flight_data_collection_20_MultiArrayDimension_l5frj4 and std_msgs::MultiArrayDimension
+
+void convertFromBus(std_msgs::MultiArrayDimension* msgPtr, SL_Bus_flight_data_collection_20_MultiArrayDimension_l5frj4 const* busPtr)
+{
+  const std::string rosMessageType("std_msgs/MultiArrayDimension");
+
+  convertFromBusVariablePrimitiveArray(msgPtr->label, busPtr->Label, busPtr->Label_SL_Info);
+  msgPtr->size =  busPtr->Size;
+  msgPtr->stride =  busPtr->Stride;
+}
+
+void convertToBus(SL_Bus_flight_data_collection_20_MultiArrayDimension_l5frj4* busPtr, std_msgs::MultiArrayDimension const* msgPtr)
+{
+  const std::string rosMessageType("std_msgs/MultiArrayDimension");
+
+  convertToBusVariablePrimitiveArray(busPtr->Label, busPtr->Label_SL_Info, msgPtr->label, slros::EnabledWarning(rosMessageType, "label"));
+  busPtr->Size =  msgPtr->size;
+  busPtr->Stride =  msgPtr->stride;
+}
+
+
+// Conversions between SL_Bus_flight_data_collection_20_MultiArrayLayout_j6k9tc and std_msgs::MultiArrayLayout
+
+void convertFromBus(std_msgs::MultiArrayLayout* msgPtr, SL_Bus_flight_data_collection_20_MultiArrayLayout_j6k9tc const* busPtr)
+{
+  const std::string rosMessageType("std_msgs/MultiArrayLayout");
+
+  msgPtr->data_offset =  busPtr->DataOffset;
+  convertFromBusVariableNestedArray(msgPtr->dim, busPtr->Dim, busPtr->Dim_SL_Info);
+}
+
+void convertToBus(SL_Bus_flight_data_collection_20_MultiArrayLayout_j6k9tc* busPtr, std_msgs::MultiArrayLayout const* msgPtr)
+{
+  const std::string rosMessageType("std_msgs/MultiArrayLayout");
+
+  busPtr->DataOffset =  msgPtr->data_offset;
+  convertToBusVariableNestedArray(busPtr->Dim, busPtr->Dim_SL_Info, msgPtr->dim, slros::EnabledWarning(rosMessageType, "dim"));
+}
+

@@ -1,0 +1,220 @@
+-- Using CATKIN_DEVEL_PREFIX: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/devel
+-- Using CMAKE_PREFIX_PATH: /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1;/home/hmcl/MATLAB_2024a/toolbox/ros/mlroscpp/custom_messages
+-- This workspace overlays: /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1;/home/hmcl/MATLAB_2024a/toolbox/ros/mlroscpp/custom_messages
+-- Found PythonInterp: /home/hmcl/.matlab/R2024a/ros1/glnxa64/venv/bin/python3 (found suitable version "3.10.14", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /home/hmcl/.matlab/R2024a/ros1/glnxa64/venv/bin/python3
+-- Using Debian Python package layout
+-- Using empy: /home/hmcl/.matlab/R2024a/ros1/glnxa64/venv/lib/python3.10/site-packages/em.py
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/build/test_results
+-- Forcing gtest/gmock from source, though one was otherwise available.
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+CMake Deprecation Warning at /usr/src/googletest/CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at /usr/src/googletest/googlemock/CMakeLists.txt:45 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at /usr/src/googletest/googletest/CMakeLists.txt:56 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Found PythonInterp: /home/hmcl/.matlab/R2024a/ros1/glnxa64/venv/bin/python3 (found version "3.10.14") 
+-- Using Python nosetests: /usr/bin/nosetests3
+-- catkin 0.8.10
+-- BUILD_SHARED_LIBS is on
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 3 packages in topological order:
+-- ~~  - flight_data_collection_10hz_conver_to_c
+-- ~~  - flight_data_collection_20hz_conver_to_c
+-- ~~  - flight_data_collection_conver_to_c
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin package: 'flight_data_collection_10hz_conver_to_c'
+-- ==> add_subdirectory(flight_data_collection_10hz_conver_to_c)
+-- +++ processing catkin package: 'flight_data_collection_20hz_conver_to_c'
+-- ==> add_subdirectory(flight_data_collection_20hz_conver_to_c)
+-- +++ processing catkin package: 'flight_data_collection_conver_to_c'
+-- ==> add_subdirectory(flight_data_collection_conver_to_c)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/build
+[1/12] Building CXX object flight_data_collection_20hz_conver_to_c/CMakeFiles/flight_data_collection_20hz_conver_to_c.dir/src/rtGetInf.cpp.o
+[2/12] Building CXX object flight_data_collection_20hz_conver_to_c/CMakeFiles/flight_data_collection_20hz_conver_to_c.dir/src/rtGetNaN.cpp.o
+[3/12] Building CXX object flight_data_collection_20hz_conver_to_c/CMakeFiles/flight_data_collection_20hz_conver_to_c.dir/src/rt_nonfinite.cpp.o
+[4/12] Building CXX object flight_data_collection_20hz_conver_to_c/CMakeFiles/flight_data_collection_20hz_conver_to_c.dir/src/slros_generic_param.cpp.o
+In file included from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/sp_thread_sleep.hpp:22,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/yield_k.hpp:23,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:14,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock.hpp:42,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock_pool.hpp:25,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/shared_ptr.hpp:65,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/shared_ptr.hpp:53,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/forwards.h:37,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/common.h:37,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/ros.h:43,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/slros_generic_param.h:9,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/src/slros_generic_param.cpp:3:
+/home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/bind.hpp:72:1: note: ‘#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace mwboost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.’
+   72 | BOOST_PRAGMA_MESSAGE(
+      | ^~~~~~~~~~~~~~~~~~~~
+[5/12] Building CXX object flight_data_collection_20hz_conver_to_c/CMakeFiles/flight_data_collection_20hz_conver_to_c.dir/src/flight_data_collection_20hz_conver_to_c_data.cpp.o
+In file included from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/sp_thread_sleep.hpp:22,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/yield_k.hpp:23,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:14,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock.hpp:42,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock_pool.hpp:25,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/shared_ptr.hpp:65,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/shared_ptr.hpp:53,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/forwards.h:37,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/common.h:37,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/ros.h:43,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/slros_busmsg_conversion.h:4,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/slros_initialize.h:4,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/flight_data_collection_20hz_conver_to_c.h:22,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/src/flight_data_collection_20hz_conver_to_c_data.cpp:19:
+/home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/bind.hpp:72:1: note: ‘#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace mwboost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.’
+   72 | BOOST_PRAGMA_MESSAGE(
+      | ^~~~~~~~~~~~~~~~~~~~
+[6/12] Building CXX object flight_data_collection_20hz_conver_to_c/CMakeFiles/flight_data_collection_20hz_conver_to_c.dir/src/main.cpp.o
+In file included from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/sp_thread_sleep.hpp:22,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/yield_k.hpp:23,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:14,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock.hpp:42,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock_pool.hpp:25,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/shared_ptr.hpp:65,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/shared_ptr.hpp:53,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/forwards.h:37,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/common.h:37,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/ros.h:43,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/slros_busmsg_conversion.h:4,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/slros_initialize.h:4,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/flight_data_collection_20hz_conver_to_c.h:22,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/rosnodeinterface.h:33,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/src/main.cpp:12:
+/home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/bind.hpp:72:1: note: ‘#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace mwboost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.’
+   72 | BOOST_PRAGMA_MESSAGE(
+      | ^~~~~~~~~~~~~~~~~~~~
+[7/12] Building CXX object flight_data_collection_20hz_conver_to_c/CMakeFiles/flight_data_collection_20hz_conver_to_c.dir/src/slros_initialize.cpp.o
+In file included from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/sp_thread_sleep.hpp:22,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/yield_k.hpp:23,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:14,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock.hpp:42,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock_pool.hpp:25,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/shared_ptr.hpp:65,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/shared_ptr.hpp:53,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/forwards.h:37,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/common.h:37,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/ros.h:43,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/slros_busmsg_conversion.h:4,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/slros_initialize.h:4,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/src/slros_initialize.cpp:1:
+/home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/bind.hpp:72:1: note: ‘#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace mwboost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.’
+   72 | BOOST_PRAGMA_MESSAGE(
+      | ^~~~~~~~~~~~~~~~~~~~
+[8/12] Building CXX object flight_data_collection_20hz_conver_to_c/CMakeFiles/flight_data_collection_20hz_conver_to_c.dir/src/rosnodeinterface.cpp.o
+In file included from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/sp_thread_sleep.hpp:22,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/yield_k.hpp:23,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:14,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock.hpp:42,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock_pool.hpp:25,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/shared_ptr.hpp:65,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/shared_ptr.hpp:53,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/forwards.h:37,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/common.h:37,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/ros.h:43,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/slros_busmsg_conversion.h:4,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/slros_initialize.h:4,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/flight_data_collection_20hz_conver_to_c.h:22,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/src/rosnodeinterface.cpp:33:
+/home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/bind.hpp:72:1: note: ‘#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace mwboost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.’
+   72 | BOOST_PRAGMA_MESSAGE(
+      | ^~~~~~~~~~~~~~~~~~~~
+[9/12] Building CXX object flight_data_collection_20hz_conver_to_c/CMakeFiles/flight_data_collection_20hz_conver_to_c.dir/src/slros_busmsg_conversion.cpp.o
+In file included from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/sp_thread_sleep.hpp:22,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/yield_k.hpp:23,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:14,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock.hpp:42,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock_pool.hpp:25,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/shared_ptr.hpp:65,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/shared_ptr.hpp:53,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/forwards.h:37,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/common.h:37,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/ros.h:43,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/slros_busmsg_conversion.h:4,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/src/slros_busmsg_conversion.cpp:1:
+/home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/bind.hpp:72:1: note: ‘#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace mwboost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.’
+   72 | BOOST_PRAGMA_MESSAGE(
+      | ^~~~~~~~~~~~~~~~~~~~
+[10/12] Building CXX object flight_data_collection_20hz_conver_to_c/CMakeFiles/flight_data_collection_20hz_conver_to_c.dir/src/flight_data_collection_20hz_conver_to_c.cpp.o
+In file included from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/sp_thread_sleep.hpp:22,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/yield_k.hpp:23,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:14,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock.hpp:42,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/detail/spinlock_pool.hpp:25,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/smart_ptr/shared_ptr.hpp:65,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/shared_ptr.hpp:53,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/forwards.h:37,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/common.h:37,
+                 from /home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/include/ros/ros.h:43,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/slros_busmsg_conversion.h:4,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/slros_initialize.h:4,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/include/flight_data_collection_20hz_conver_to_c/flight_data_collection_20hz_conver_to_c.h:22,
+                 from /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src/flight_data_collection_20hz_conver_to_c/src/flight_data_collection_20hz_conver_to_c.cpp:19:
+/home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1/boost/include/boost/bind.hpp:72:1: note: ‘#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace mwboost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.’
+   72 | BOOST_PRAGMA_MESSAGE(
+      | ^~~~~~~~~~~~~~~~~~~~
+[11/12] Linking CXX executable /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/devel/lib/flight_data_collection_20hz_conver_to_c/flight_data_collection_20hz_conver_to_c
+[11/12] Install the project...
+-- Install configuration: ""
+-- Installing: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/_setup_util.py
+-- Up-to-date: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/env.sh
+-- Up-to-date: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/setup.bash
+-- Up-to-date: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/local_setup.bash
+-- Up-to-date: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/setup.sh
+-- Up-to-date: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/local_setup.sh
+-- Up-to-date: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/setup.zsh
+-- Up-to-date: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/local_setup.zsh
+-- Up-to-date: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/.rosinstall
+-- Installing: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/lib/pkgconfig/flight_data_collection_10hz_conver_to_c.pc
+-- Up-to-date: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/share/flight_data_collection_10hz_conver_to_c/cmake/flight_data_collection_10hz_conver_to_cConfig.cmake
+-- Up-to-date: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/share/flight_data_collection_10hz_conver_to_c/cmake/flight_data_collection_10hz_conver_to_cConfig-version.cmake
+-- Up-to-date: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/share/flight_data_collection_10hz_conver_to_c/package.xml
+-- Up-to-date: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/lib/flight_data_collection_10hz_conver_to_c/flight_data_collection_10hz_conver_to_c
+-- Installing: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/lib/pkgconfig/flight_data_collection_20hz_conver_to_c.pc
+-- Installing: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/share/flight_data_collection_20hz_conver_to_c/cmake/flight_data_collection_20hz_conver_to_cConfig.cmake
+-- Installing: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/share/flight_data_collection_20hz_conver_to_c/cmake/flight_data_collection_20hz_conver_to_cConfig-version.cmake
+-- Installing: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/share/flight_data_collection_20hz_conver_to_c/package.xml
+-- Installing: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/lib/flight_data_collection_20hz_conver_to_c/flight_data_collection_20hz_conver_to_c
+-- Installing: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/lib/pkgconfig/flight_data_collection_conver_to_c.pc
+-- Up-to-date: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/share/flight_data_collection_conver_to_c/cmake/flight_data_collection_conver_to_cConfig.cmake
+-- Up-to-date: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/share/flight_data_collection_conver_to_c/cmake/flight_data_collection_conver_to_cConfig-version.cmake
+-- Up-to-date: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/share/flight_data_collection_conver_to_c/package.xml
+-- Up-to-date: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install/lib/flight_data_collection_conver_to_c/flight_data_collection_conver_to_c
+Base path: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab
+Source space: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src
+Build space: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/build
+Devel space: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/devel
+Install space: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install
+####
+#### Running command: "cmake /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/src -DALIAS_ROS1_CLASS_LOADER=1 -DBoost_NAMESPACE=mwboost -DCMAKE_PREFIX_PATH=/home/hmcl/MATLAB_2024a/sys/ros1/glnxa64/ros1;/home/hmcl/MATLAB_2024a/toolbox/ros/mlroscpp/custom_messages -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -DCATKIN_DEVEL_PREFIX=/home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/devel -DCMAKE_INSTALL_PREFIX=/home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install -G Ninja" in "/home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/build"
+####
+####
+#### Running command: "ninja install -j16 -l16" in "/home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/build"
+####

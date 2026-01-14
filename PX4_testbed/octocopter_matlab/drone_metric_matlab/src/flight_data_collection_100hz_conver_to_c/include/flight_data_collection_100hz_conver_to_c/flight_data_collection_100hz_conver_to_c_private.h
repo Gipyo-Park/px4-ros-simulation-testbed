@@ -1,0 +1,32 @@
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// File: flight_data_collection_100hz_conver_to_c_private.h
+//
+// Code generated for Simulink model 'flight_data_collection_100hz_conver_to_c'.
+//
+// Model version                  : 2.374
+// Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
+// C/C++ source code generated on : Thu Dec  4 16:20:05 2025
+//
+// Target selection: ert.tlc
+// Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
+// Code generation objectives: Unspecified
+// Validation result: Not run
+//
+#ifndef flight_data_collection_100hz_conver_to_c_private_h_
+#define flight_data_collection_100hz_conver_to_c_private_h_
+#include "rtwtypes.h"
+#include "flight_data_collection_100hz_conver_to_c_types.h"
+
+extern real_T rt_atan2d_snf(real_T u0, real_T u1);
+
+#endif                   // flight_data_collection_100hz_conver_to_c_private_h_
+
+//
+// File trailer for generated code.
+//
+// [EOF]
+//

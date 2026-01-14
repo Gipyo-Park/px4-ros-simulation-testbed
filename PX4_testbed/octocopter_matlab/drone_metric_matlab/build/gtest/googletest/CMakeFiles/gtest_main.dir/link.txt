@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libgtest_main.so -o ../lib/libgtest_main.so CMakeFiles/gtest_main.dir/src/gtest_main.cc.o  -Wl,-rpath,/home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/build/gtest/lib ../lib/libgtest.so -lpthread 

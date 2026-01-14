@@ -1,0 +1,56 @@
+#include "slros_initialize.h"
+
+ros::NodeHandle * SLROSNodePtr;
+const std::string SLROSNodeName = "flight_data_collection_20hz_conver_to_c";
+
+// For Block flight_data_collection_20hz_conver_to_c/Subscribe
+SimulinkSubscriber<std_msgs::Float64, SL_Bus_flight_data_collection_20_Float64_gj0fpw> Sub_flight_data_collection_20hz_conver_to_c_1138;
+
+// For Block flight_data_collection_20hz_conver_to_c/Subscribe10
+SimulinkSubscriber<geometry_msgs::Vector3, SL_Bus_flight_data_collection_20_Vector3_cscv97> Sub_flight_data_collection_20hz_conver_to_c_1305;
+
+// For Block flight_data_collection_20hz_conver_to_c/Subscribe11
+SimulinkSubscriber<geometry_msgs::Vector3, SL_Bus_flight_data_collection_20_Vector3_cscv97> Sub_flight_data_collection_20hz_conver_to_c_1306;
+
+// For Block flight_data_collection_20hz_conver_to_c/Subscribe12
+SimulinkSubscriber<geometry_msgs::PoseStamped, SL_Bus_flight_data_collection_20_PoseStamped_cwoda2> Sub_flight_data_collection_20hz_conver_to_c_1918;
+
+// For Block flight_data_collection_20hz_conver_to_c/Subscribe13
+SimulinkSubscriber<geometry_msgs::TwistStamped, SL_Bus_flight_data_collection_20_TwistStamped_silrfq> Sub_flight_data_collection_20hz_conver_to_c_1930;
+
+// For Block flight_data_collection_20hz_conver_to_c/Subscribe14
+SimulinkSubscriber<sensor_msgs::Imu, SL_Bus_flight_data_collection_20_Imu_ywzqgu> Sub_flight_data_collection_20hz_conver_to_c_1935;
+
+// For Block flight_data_collection_20hz_conver_to_c/Subscribe2
+SimulinkSubscriber<geometry_msgs::Vector3, SL_Bus_flight_data_collection_20_Vector3_cscv97> Sub_flight_data_collection_20hz_conver_to_c_1606;
+
+// For Block flight_data_collection_20hz_conver_to_c/Subscribe3
+SimulinkSubscriber<std_msgs::Float64, SL_Bus_flight_data_collection_20_Float64_gj0fpw> Sub_flight_data_collection_20hz_conver_to_c_1139;
+
+// For Block flight_data_collection_20hz_conver_to_c/Subscribe4
+SimulinkSubscriber<std_msgs::Float64, SL_Bus_flight_data_collection_20_Float64_gj0fpw> Sub_flight_data_collection_20hz_conver_to_c_1140;
+
+// For Block flight_data_collection_20hz_conver_to_c/Subscribe5
+SimulinkSubscriber<std_msgs::Float64, SL_Bus_flight_data_collection_20_Float64_gj0fpw> Sub_flight_data_collection_20hz_conver_to_c_1141;
+
+// For Block flight_data_collection_20hz_conver_to_c/Subscribe6
+SimulinkSubscriber<std_msgs::Float64, SL_Bus_flight_data_collection_20_Float64_gj0fpw> Sub_flight_data_collection_20hz_conver_to_c_1142;
+
+// For Block flight_data_collection_20hz_conver_to_c/Subscribe7
+SimulinkSubscriber<std_msgs::Float64, SL_Bus_flight_data_collection_20_Float64_gj0fpw> Sub_flight_data_collection_20hz_conver_to_c_1143;
+
+// For Block flight_data_collection_20hz_conver_to_c/Subscribe8
+SimulinkSubscriber<std_msgs::Float64, SL_Bus_flight_data_collection_20_Float64_gj0fpw> Sub_flight_data_collection_20hz_conver_to_c_1144;
+
+// For Block flight_data_collection_20hz_conver_to_c/Subscribe9
+SimulinkSubscriber<std_msgs::Float64, SL_Bus_flight_data_collection_20_Float64_gj0fpw> Sub_flight_data_collection_20hz_conver_to_c_1145;
+
+// For Block flight_data_collection_20hz_conver_to_c/Publish
+SimulinkPublisher<std_msgs::Float64MultiArray, SL_Bus_flight_data_collection_20_Float64MultiArray_lxkfqk> Pub_flight_data_collection_20hz_conver_to_c_1941;
+
+void slros_node_init(int argc, char** argv)
+{
+  ros::init(argc, argv, SLROSNodeName);
+  SLROSNodePtr = new ros::NodeHandle();
+}
+

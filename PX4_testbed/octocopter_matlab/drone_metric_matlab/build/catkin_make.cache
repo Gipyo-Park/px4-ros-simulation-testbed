@@ -1,0 +1,2 @@
+flight_data_collection_100hz_conver_to_c:flight_data_collection_10hz_conver_to_c:flight_data_collection_20hz_conver_to_c:flight_data_collection_50hz_conver_to_c
+-DPYTHON_EXECUTABLE=/usr/local/bin/python3.10 -DCATKIN_DEVEL_PREFIX=/home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/devel -DCMAKE_INSTALL_PREFIX=/home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/install -G Unix Makefiles

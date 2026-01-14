@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/hmcl/PX4_testbed/octocopter_matlab/drone_metric_matlab/devel/setup.sh
