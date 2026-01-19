@@ -466,4 +466,31 @@ roslaunch airo_trajectory file_trajectory.launch
 
 
 
+----------------------------------------------------------------------------------------
 
+2026-01-19
+
+
+reallocation 하는 방법을 추가
+
+/home/hmcl/PX4_testbed/PX4-Autopilot/src/modules/control_allocator/ControlAllocator.cpp
+/home/hmcl/PX4_testbed/PX4-Autopilot/src/modules/control_allocator/ControlAllocation/ControlAllocationPseudoInverse.cpp
+/home/hmcl/PX4_testbed/PX4-Autopilot/src/examples/custom_motor_failure_number/custom_motor_failure_number.cpp
+
+기존에는 reallocation하면 d = 100 과 e = 101 일때, FTC를 하지만 열만 제거함으로써 yaw를 살리는 방식이였다.
+하지만 f = 102, g = 103 일때는 열과 행을 제거함으로써, yaw를 포기하는 방식을 추가했다.
+else 경우에는 reallocation을 하지 않는 방식이다. 즉 고장에 대해 어떠한 대처도 없는 그냥 고장만 나는 방식이라는거다.
+
+
+/home/hmcl/PX4_testbed/PX4-Autopilot/src/modules/mavlink/streams/CUSTOM_VEHICLE_THRUST_SETPOINT.hpp
+/home/hmcl/PX4_testbed/PX4-Autopilot/src/modules/mavlink/streams/CUSTOM_VEHICLE_TORQUE_SETPOINT.hpp
+
+이 파일들은 px4에서 mavlink를 통해 ros로 전달하기 위한거다.
+원래도 있었지만 offboard를 추가하면서
+
+mavproxy.py --master=udp:127.0.0.1:14550 --out=udp:127.0.0.1:14551 --out=udp:127.0.0.1:14552
+rosrun px4_bridge_msgs mavlink_to_ros.py
+이게 작동이 안되었다.
+그래서
+
+어떤 모드인지에 따라 bool 값을 줌으로써 전달되도록 했다.

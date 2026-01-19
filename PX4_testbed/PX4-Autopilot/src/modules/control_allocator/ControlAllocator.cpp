@@ -790,9 +790,18 @@ ControlAllocator::publish_actuator_controls()
                 		failed_motor[i] = false;
             		}
 
+		// ===== FTC 모드 키 정의 =====
+		// 'd' = 100: 단일 고장 + FTC (yaw 유지)
+		// 'e' = 101: 다중 고장 + FTC (yaw 유지)
+		// 'f' = 102: 단일 고장 + FTC (yaw 포기)
+		// 'g' = 103: 다중 고장 + FTC (yaw 포기)
+		// 위 키들은 effectiveness 행렬 수정으로 재배분하므로 모터 출력 차단 안 함
 
-        	} else if (input.key[0] != 'd' && input.key[0] != 'e') {
-            		// 'd'·'e' 키가 아닐 때만 고장 처리
+        	} else if (input.key[0] != 'd' && input.key[0] != 'e' &&
+			   input.key[0] != 'f' && input.key[0] != 'g') {
+            		// ===== No FTC 모드: 모터 출력 직접 차단 =====
+			// FTC 키가 아닐 때만 해당 모터를 NaN으로 설정하여 멈춤
+			// 재배분 없이 해당 모터만 정지
             		const int idx = static_cast<int>(input.value) - 1;  // 0-based
             		if (idx >= 0 && idx < _num_actuators[0]) {
                 		failed_motor[idx]            = true;

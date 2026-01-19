@@ -2,6 +2,8 @@
 #define CUSTOM_VEHICLE_TORQUE_SETPOINT_HPP
 
 #include <uORB/topics/vehicle_torque_setpoint.h>
+#include <uORB/topics/vehicle_control_mode.h>
+#include <uORB/topics/offboard_control_mode.h>
 
 class MavlinkStreamVehicleTorqueSetpoint : public MavlinkStream
 {
@@ -35,6 +37,11 @@ private:
     explicit MavlinkStreamVehicleTorqueSetpoint(Mavlink *mavlink) : MavlinkStream(mavlink) {}
 
     uORB::Subscription _torque_setpoint_sub{ORB_ID(vehicle_torque_setpoint)};
+    uORB::Subscription _torque_setpoint_offboard_sub{ORB_ID(vehicle_torque_setpoint_offboard)};
+    uORB::Subscription _vehicle_control_mode_sub{ORB_ID(vehicle_control_mode)};
+    uORB::Subscription _offboard_control_mode_sub{ORB_ID(offboard_control_mode)};
+
+
 
 
     bool send() override
@@ -43,9 +50,32 @@ private:
 
         struct vehicle_torque_setpoint_s _torque_setpoint;    // make sure vehicle_torque_setpoint_s is the definition of your uORB topic
 
-        if (_torque_setpoint_sub.update(&_torque_setpoint)) {
+        // ✅ ControlAllocator와 동일한 조건 사용
+        offboard_control_mode_s offboard_mode{};
+        _offboard_control_mode_sub.copy(&offboard_mode);
+        const bool is_offboard_actuator = offboard_mode.actuator;
 
-            _torque_setpoint_sub.copy(&_torque_setpoint);
+        vehicle_control_mode_s control_mode{};
+        _vehicle_control_mode_sub.copy(&control_mode);
+        const bool is_offboard_mode = control_mode.flag_control_offboard_enabled;
+        const bool is_rate_control_mode = control_mode.flag_control_rates_enabled;
+        const bool is_attitude_control_mode = control_mode.flag_control_attitude_enabled;
+
+        bool updated = false;
+
+        // ✅ ControlAllocator.cpp와 동일한 조건
+        if (!is_rate_control_mode && is_offboard_mode && is_offboard_actuator) {
+            // Offboard 모드: offboard 토픽 사용
+            updated = _torque_setpoint_offboard_sub.update(&_torque_setpoint);
+
+        } else if (is_rate_control_mode && is_attitude_control_mode && !is_offboard_actuator) {
+            // 내부 Rate Controller 모드: 내부 토픽 사용
+            updated = _torque_setpoint_sub.update(&_torque_setpoint);
+        }
+
+
+        if (updated) {
+
             mavlink_custom_vehicle_torque_setpoint_t _msg_torque_setpoint{};  // make sure mavlink_vehicle_torque_setpoint_t is the definition of your custom MAVLink message
 
             _msg_torque_setpoint.timestamp = _torque_setpoint.timestamp;

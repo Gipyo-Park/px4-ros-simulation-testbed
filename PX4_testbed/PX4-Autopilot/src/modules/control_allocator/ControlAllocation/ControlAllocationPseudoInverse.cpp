@@ -107,17 +107,22 @@ ControlAllocationPseudoInverse::updatePseudoInverse()
 
 
 			// if문 없으면 토픽 여러개 안 만들고 여러개 고장 가능
-			// d = 100
-			// e = 101
+			// d = 100, 단일 모터 열을 비활성화해서 FTC 고장 모드 (yaw 포기 X)
+			// e = 101, 다중 모터 열을 비활성화해서 FTC 고장 모드 (yaw 포기 X)
+			// f = 102, 단일 모터 열 + yaw 행을 비활성화해서 FTC 고장 모드 (yaw 포기 O)
+			// g = 103, 다중 모터 열 + yaw 행을 비활성화해서 FTC 고장 모드 (yaw 포기 O)
 			if(motor_failure_data.key[0] == 'd') {
+				// ===== 'd' (100): 단일 모터 고장, yaw 유지 =====
+				// 해당 모터 열(column)만 0으로 설정
+				// yaw 제어는 유지되어 나머지 모터로 yaw 보상 시도
 
 				if (temp != static_cast<int>(motor_failure_data.uorb_motor_failure_number)) {
 					_effectiveness = backup_effectiveness;
 					temp = static_cast<int>(motor_failure_data.uorb_motor_failure_number);
 				}
 
-				if (mode_flag == 1){
-					// PX4_INFO("[ControlAllocationPseudoInverse] single motor failure mode");
+				if (mode_flag != 0){
+					// PX4_INFO("[ControlAllocationPseudoInverse] single motor failure mode (yaw maintained)");
 					mode_flag = 0;
 				}
 				no_ftc_mode_msg_printed = false; // FTC 모드 진입 시 플래그 리셋
@@ -129,8 +134,12 @@ ControlAllocationPseudoInverse::updatePseudoInverse()
 
 			}
 			else if(motor_failure_data.key[0] == 'e') {
-				if (mode_flag == 0){
-					// PX4_INFO("[ControlAllocationPseudoInverse] multi motor failures mode");
+				// ===== 'e' (101): 다중 모터 고장, yaw 유지 =====
+				// 누적해서 해당 모터 열(column)만 0으로 설정
+				// yaw 제어는 유지되어 나머지 모터로 yaw 보상 시도
+
+				if (mode_flag != 1){
+					// PX4_INFO("[ControlAllocationPseudoInverse] multi motor failures mode (yaw maintained)");
 					mode_flag = 1;
 				}
 				no_ftc_mode_msg_printed = false; // FTC 모드 진입 시 플래그 리셋
@@ -140,7 +149,59 @@ ControlAllocationPseudoInverse::updatePseudoInverse()
     					_effectiveness(i, column_change - 1) = 0.f;
 				}
 			}
+			else if(motor_failure_data.key[0] == 'f') {
+				// ===== 'f' (102): 단일 모터 고장, yaw 포기 =====
+				// 해당 모터 열(column) + yaw 행(row 2) 전체를 0으로 설정
+				// yaw 제어를 포기하고 roll/pitch/thrust에 집중
+
+				if (temp != static_cast<int>(motor_failure_data.uorb_motor_failure_number)) {
+					_effectiveness = backup_effectiveness;
+					temp = static_cast<int>(motor_failure_data.uorb_motor_failure_number);
+				}
+
+				if (mode_flag != 2){
+					// PX4_INFO("[ControlAllocationPseudoInverse] single motor failure mode (yaw abandoned)");
+					mode_flag = 2;
+				}
+				no_ftc_mode_msg_printed = false; // FTC 모드 진입 시 플래그 리셋
+				int column_change = static_cast<int>(math::min(motor_failure_data.uorb_motor_failure_number, static_cast<float>(_num_actuators)));
+
+				// 해당 모터 열(column) 비활성화
+				for (int i = 0; i < 6; ++i) {
+    					_effectiveness(i, column_change - 1) = 0.f;
+				}
+
+				// yaw 행(row 2) 전체 비활성화 - yaw 제어 포기
+				for (int j = 0; j < _num_actuators; ++j) {
+					_effectiveness(2, j) = 0.f;
+				}
+			}
+			else if(motor_failure_data.key[0] == 'g') {
+				// ===== 'g' (103): 다중 모터 고장, yaw 포기 =====
+				// 누적해서 해당 모터 열(column) + yaw 행(row 2) 전체를 0으로 설정
+				// yaw 제어를 포기하고 roll/pitch/thrust에 집중
+
+				if (mode_flag != 3){
+					// PX4_INFO("[ControlAllocationPseudoInverse] multi motor failures mode (yaw abandoned)");
+					mode_flag = 3;
+				}
+				no_ftc_mode_msg_printed = false; // FTC 모드 진입 시 플래그 리셋
+				int column_change = static_cast<int>(math::min(motor_failure_data.uorb_motor_failure_number, static_cast<float>(_num_actuators)));
+
+				// 해당 모터 열(column) 비활성화 (누적)
+				for (int i = 0; i < 6; ++i) {
+    					_effectiveness(i, column_change - 1) = 0.f;
+				}
+
+				// yaw 행(row 2) 전체 비활성화 - yaw 제어 포기
+				for (int j = 0; j < _num_actuators; ++j) {
+					_effectiveness(2, j) = 0.f;
+				}
+			}
 			else {
+				// ===== 기타: FTC 없음 (No reallocation) =====
+				// effectiveness 수정 안 함 → 원래 행렬 그대로 사용
+				// 고장 모터가 있어도 재배분 없이 기존 배분 유지
 				if (!no_ftc_mode_msg_printed) {
         				// PX4_INFO("[ControlAllocationPseudoInverse] No FTC mode");
         				no_ftc_mode_msg_printed = true;

@@ -118,14 +118,20 @@ void CustomMotorFailureNumber::Run()
         	}
 
 
-		// d = 100
-		// e = 101
+		// d = 100, 단일 모터 열을 비활성화해서 FTC 고장 모드 (yaw 포기 X)
+		// e = 101, 다중 모터 열을 비활성화해서 FTC 고장 모드 (yaw 포기 X)
+		// f = 102, 단일 모터 열 + yaw 행을 비활성화해서 FTC 고장 모드 (yaw 포기 O)
+		// g = 103, 다중 모터 열 + yaw 행을 비활성화해서 FTC 고장 모드 (yaw 포기 O)
         	if (changed) {
          		const char *mode;
     			if (_prev_key[0] == 'd') {
-        			mode = "single reallocation";
+        			mode = "single reallocation (yaw maintained)";
     			} else if (_prev_key[0] == 'e') {
-        			mode = "multi reallocation";
+        			mode = "multi reallocation (yaw maintained)";
+    			} else if (_prev_key[0] == 'f') {
+        			mode = "single reallocation (yaw abandoned)";
+    			} else if (_prev_key[0] == 'g') {
+        			mode = "multi reallocation (yaw abandoned)";
     			} else {
         			mode = "No reallocation";
     			}
