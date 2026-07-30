@@ -55,18 +55,6 @@ flowchart LR
     D --> E["MATLAB / Simulink Evaluation"]
 ```
 
-## Recommended Documentation Cleanup
-
-The existing history and troubleshooting files can be retained while giving
-them standard Markdown names:
-
-```text
-docs/
-├── change-history.md
-└── troubleshooting.md
-```
-
-When reorganizing these files, preserve their Git history with `git mv`.
 
 ## Upstream Source
 
