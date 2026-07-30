@@ -230,7 +230,7 @@ git submodule update --init --recursive
 
 ## Core Technologies
 
-`PX4` `Pixhawk` `ROS 1` `Gazebo Classic` `MAVLink` `MAVROS`  
+`PX4` `Pixhawk` `ROS` `Gazebo Classic` `MAVLink` `MAVROS`  
 `MATLAB` `Simulink` `C++` `Python` `QGroundControl` `Ubuntu`
 
 ## Acknowledgements
