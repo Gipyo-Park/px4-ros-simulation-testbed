@@ -161,19 +161,30 @@ Detailed quantitative results are intentionally separated from the repository
 overview.
 
 
-<p align="right">
-  <img src="./assets/demos/indoor-flight-demo_1_8_fault.gif" width="900" alt="Indoor flight demonstration">
-</p>
-
-
-<p align="center">
-  <img src="./assets/demos/indoor-flight-demo_3_8fault.gif" width="900" alt="Indoor flight demonstration">
-</p>
-
-
-<p align="left">
-  <img src="./assets/demos/hil-setup-demo.gif" width="900" alt="Indoor flight demonstration">
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <img src="./assets/demos/indoor-flight-demo_1_8_fault.gif"
+           width="240"
+           alt="Indoor flight with motors 1 and 8 fault">
+    </td>
+    <td align="center">
+      <img src="./assets/demos/indoor-flight-demo_3_8fault.gif"
+           width="240"
+           alt="Indoor flight with motors 3 and 8 fault">
+    </td>
+    <td align="center">
+      <img src="./assets/demos/hil-setup-demo.gif"
+           width="240"
+           alt="HIL test setup">
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>Motors 1 & 8 Fault</b></td>
+    <td align="center"><b>Motors 3 & 8 Fault</b></td>
+    <td align="center"><b>HIL Test Setup</b></td>
+  </tr>
+</table>
 
 
 ## Repository Guide
