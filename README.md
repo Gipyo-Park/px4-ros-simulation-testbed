@@ -33,12 +33,11 @@ collected for post-processing.
   <img src="./assets/images/integrated-sils-environment.png" width="100%" alt="Integrated SILS runtime environment">
 </p>
 
-<!--
-Replace this comment with the GIF after conversion:
+
 <p align="center">
   <img src="./assets/demos/sils-automation-demo.gif" width="900" alt="Automated SILS execution">
 </p>
--->
+
 
 ## SILS Scenario Injection
 
@@ -52,11 +51,11 @@ Motor-fault commands are transferred through the ROS/MAVLink interface and
 applied to the Gazebo motor model. This enables repeatable tests for selected
 motor failures without changing the remainder of the flight scenario.
 
-<!--
+
 <p align="center">
   <img src="./assets/demos/motor-fault-demo.gif" width="900" alt="Motor-fault injection demonstration">
 </p>
--->
+
 
 ### Wind Disturbance Injection
 
@@ -68,11 +67,11 @@ Wind direction, magnitude, gust, and stochastic disturbance conditions are
 published from ROS and applied to the simulated vehicle through the Gazebo wind
 plugin.
 
-<!--
+
 <p align="center">
   <img src="./assets/demos/wind-disturbance-demo.gif" width="900" alt="Wind-disturbance demonstration">
 </p>
--->
+
 
 <details>
 <summary>Wind and rotor aerodynamic model</summary>
@@ -157,11 +156,11 @@ This section presents the experimental environment and flight demonstrations.
 Detailed quantitative results are intentionally separated from the repository
 overview.
 
-<!--
+
 <p align="center">
   <img src="./assets/demos/indoor-flight-demo.gif" width="900" alt="Indoor flight demonstration">
 </p>
--->
+
 
 ## Repository Guide
 
