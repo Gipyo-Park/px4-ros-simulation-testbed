@@ -39,6 +39,10 @@ collected for post-processing.
 </p>
 
 
+<p align="center">
+  <img src="./assets/demos/sils-automation-demo_1_3_5_fault.gif" width="900" alt="Automated SILS execution">
+</p>
+
 ## SILS Scenario Injection
 
 ### Motor Fault Injection
@@ -159,6 +163,16 @@ overview.
 
 <p align="center">
   <img src="./assets/demos/indoor-flight-demo_1_8_fault.gif" width="900" alt="Indoor flight demonstration">
+</p>
+
+
+<p align="center">
+  <img src="./assets/demos/indoor-flight-demo_3_8fault.gif" width="900" alt="Indoor flight demonstration">
+</p>
+
+
+<p align="center">
+  <img src="./assets/demos/hil-setup-demo.gif" width="900" alt="Indoor flight demonstration">
 </p>
 
 
