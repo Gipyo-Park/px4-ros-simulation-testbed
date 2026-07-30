@@ -161,7 +161,7 @@ Detailed quantitative results are intentionally separated from the repository
 overview.
 
 
-<p align="center">
+<p align="right">
   <img src="./assets/demos/indoor-flight-demo_1_8_fault.gif" width="900" alt="Indoor flight demonstration">
 </p>
 
@@ -171,7 +171,7 @@ overview.
 </p>
 
 
-<p align="center">
+<p align="left">
   <img src="./assets/demos/hil-setup-demo.gif" width="900" alt="Indoor flight demonstration">
 </p>
 
