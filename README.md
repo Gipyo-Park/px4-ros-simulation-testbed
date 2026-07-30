@@ -158,7 +158,7 @@ overview.
 
 
 <p align="center">
-  <img src="./assets/demos/indoor-flight-demo.gif" width="900" alt="Indoor flight demonstration">
+  <img src="./assets/demos/indoor-flight-demo_1_8_fault.gif" width="900" alt="Indoor flight demonstration">
 </p>
 
 
