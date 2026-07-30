@@ -165,17 +165,17 @@ overview.
   <tr>
     <td align="center">
       <img src="./assets/demos/indoor-flight-demo_1_8_fault.gif"
-           width="300"
+           width="240"
            alt="Indoor flight with motors 1 and 8 fault">
     </td>
     <td align="center">
       <img src="./assets/demos/indoor-flight-demo_3_8fault.gif"
-           width="300"
+           width="240"
            alt="Indoor flight with motors 3 and 8 fault">
     </td>
     <td align="center">
       <img src="./assets/demos/hil-setup-demo.gif"
-           width="300"
+           width="240"
            alt="HIL test setup">
     </td>
   </tr>
