@@ -57,13 +57,18 @@ collected for post-processing.
 </p>
 
 Motor-fault commands are transferred through the ROS/MAVLink interface and
-applied to the Gazebo motor model. This enables repeatable tests for selected
+applied to the Gazebo. This enables repeatable tests for selected
 motor failures without changing the remainder of the flight scenario.
 
 
 <p align="center">
   <img src="./assets/demos/motor-fault-demo.gif" width="900" alt="Motor-fault injection demonstration">
 </p>
+<div align="center">
+
+  #### Motor-fault injection demonstration (Left: Simulink scope for evaluation)
+
+</div>
 
 
 ### Wind Disturbance Injection
@@ -72,7 +77,7 @@ motor failures without changing the remainder of the flight scenario.
   <img src="./assets/images/wind-disturbance-injection.png" width="100%" alt="Wind disturbance injection workflow">
 </p>
 
-Wind direction, magnitude, gust, and stochastic disturbance conditions are
+Wind direction, magnitude, steady, gust, and stochastic disturbance(Turbulence) conditions are
 published from ROS and applied to the simulated vehicle through the Gazebo wind
 plugin.
 
@@ -80,6 +85,11 @@ plugin.
 <p align="center">
   <img src="./assets/demos/wind-disturbance-demo.gif" width="900" alt="Wind-disturbance demonstration">
 </p>
+<div align="center">
+
+  #### Wind-disturbance demonstration (Left: Simulink scope for evaluation)
+
+</div>
 
 
 <details>
@@ -88,6 +98,13 @@ plugin.
 <p align="center">
   <img src="./assets/images/wind-aerodynamic-model.png" width="100%" alt="Wind directions and rotor aerodynamic model">
 </p>
+<div align="center">
+
+  #### Wind directions and rotor aerodynamic model
+
+</div>
+
+For more details, please refer to https://github.com/PX4/PX4-SITL_gazebo-classic/issues/110.
 
 </details>
 
