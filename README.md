@@ -31,6 +31,11 @@ collected for post-processing.
   <img src="./assets/images/integrated-sils-environment.png" width="100%" alt="Integrated SILS runtime environment">
 </p>
 
+<p align="center">
+
+  Integrated SILS runtime environment
+</p>
+
 <!--
 <p align="center">
   <img src="./assets/demos/sils-automation-demo.gif" width="900" alt="Automated SILS execution">
