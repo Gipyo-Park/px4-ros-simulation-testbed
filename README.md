@@ -1,32 +1,30 @@
 # PX4–ROS Simulation Testbed
 
-> An integrated SIL/HIL validation environment for octocopter fault injection,
-> wind-disturbance testing, control-authority analysis, and safety-performance
+> An integrated SIL/HIL validation environment for multirotor fault injection,
+> wind-disturbance testing, motor fault testing, attainable control set(ACS) analysis, and safety-performance
 > evaluation.
 
-PX4, Gazebo, ROS/MAVLink, MATLAB/Simulink을 연동하여 옥토콥터의 고장·외란
-조건을 생성하고, 비행 성능과 제어 가능 영역을 반복적으로 평가하기 위한
-simulation testbed입니다.
+PX4, Gazebo, ROS/MAVLink, MATLAB/Simulink을 연동하여 멀티로터의 고장·외란
+조건을 생성하고, 비행 성능을 평가하기 위한 Test automation testbed입니다.
 
 ## What This Testbed Demonstrates
 
 - Automated execution of SILS test scenarios
 - Motor-fault and wind-disturbance injection
 - PX4–ROS–MATLAB/Simulink data exchange
-- Control-authority and trajectory-tracking evaluation
+- Flight performance evaluation
 - Safety-performance envelope visualization
 - HIL and motion-capture-based indoor flight experiments
 
-## System Architecture
+## SILS System Architecture
 
 <p align="center">
   <img src="./assets/images/sils-architecture.png" width="100%" alt="PX4 ROS SILS architecture">
 </p>
 
-The testbed connects PX4 flight-control software, Gazebo vehicle dynamics,
-ROS/MAVLink middleware, QGroundControl, and MATLAB/Simulink-based evaluation.
-Operating conditions such as actuator faults and wind disturbances can be
-configured while flight states, control effort, and tracking performance are
+This testbed conducted evaluations based on PX4, Gazebo, ROS/MAVLink, QGroundControl, and MATLAB/Simulink.
+Operating conditions such as motor faults, wind disturbances, Controller options, and FTC activation can be
+configured while flight states, control effort(or input), and tracking error are
 collected for post-processing.
 
 <p align="center">
