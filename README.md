@@ -179,6 +179,13 @@ envelope with fewer simulation samples.
 <p align="center">
   <img src="./assets/images/active-sampling-results.png" width="100%" alt="Active sampling prediction and comparison results">
 </p>
+<div align="center">
+
+  #### Active sampling prediction and comparison result
+
+</div>
+
+
 
 ## HIL & Indoor Flight Experiments
 
