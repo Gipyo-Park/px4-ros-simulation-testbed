@@ -140,19 +140,19 @@ Performance and safety of the multirotor are evaluated under various failure and
 </p>
 
 <details>
-<summary>Compare fault-condition envelopes</summary>
+<summary>Comparison safety performance envelopes with various conditions</summary>
 
 #### Single-motor fault
 
 <img src="./assets/images/safety-envelope-single-fault.png" width="100%" alt="Safety envelope with a single-motor fault">
 
-#### Critical double-motor fault
+#### Double Motor Failures Under Different Conditions (No. 1, 5)
 
-<img src="./assets/images/safety-envelope-double-fault-critical.png" width="100%" alt="Safety envelope with a critical double-motor fault">
+<img src="./assets/images/safety-envelope-double-fault-critical.png" width="100%" alt="Safety envelope with a double-motor fault (No. 1, 5)">
 
-#### Fault-tolerant double-motor configuration
+#### Double Motor Failures Under Different Conditions (No. 3, 8)
 
-<img src="./assets/images/safety-envelope-double-fault-tolerant.png" width="100%" alt="Safety envelope with a fault-tolerant double-motor configuration">
+<img src="./assets/images/safety-envelope-double-fault-tolerant.png" width="100%" alt="Safety envelope with a double-motor fault (No. 3, 8)">
 
 </details>
 
