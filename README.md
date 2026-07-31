@@ -197,11 +197,7 @@ envelope with fewer simulation samples.
 - Ground-control and telemetry monitoring
 - Thrust-measurement setup
 - Motion-capture-based indoor positioning
-- Indoor flight demonstration and data collection
-
-This section presents the experimental environment and flight demonstrations.
-Detailed quantitative results are intentionally separated from the repository
-overview.
+- Indoor flight demonstration and validation
 
 
 <table>
@@ -236,19 +232,7 @@ overview.
 | --- | --- |
 | [`PX4_testbed/`](./PX4_testbed/) | PX4/Gazebo modifications, octocopter models, and testbed-specific files |
 | [`catkin_workspace`](https://github.com/Gipyo-Park/catkin_workspace) | ROS packages for control, communication, wind commands, and PX4 data bridging |
-| [`docs/`](./docs/) | Detailed SILS, evaluation, and HIL documentation |
-| [`assets/`](./assets/) | Architecture diagrams, results, photos, and demo media |
 
-## Engineering Scope
-
-| Category | Scope in this repository |
-| --- | --- |
-| Custom | Wind-command nodes, PX4 bridge messages, data exchange, scenario configuration, evaluation and visualization |
-| Modified | PX4/Gazebo motor-fault and wind components, vehicle models, and MAVROS fault-command interface |
-| Integrated | PX4-Autopilot, MAVLink, MAVROS, Gazebo ROS packages, QGroundControl, and AIRo control packages |
-
-The distinction above separates project-specific engineering work from
-integrated open-source components.
 
 ## Documentation
 
