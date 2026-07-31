@@ -33,7 +33,7 @@ collected for post-processing.
 
 <div align="center">
 
-  Integrated SILS runtime environment
+  ### Integrated SILS runtime environment
 
 </div>
 
