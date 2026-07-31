@@ -31,10 +31,11 @@ collected for post-processing.
   <img src="./assets/images/integrated-sils-environment.png" width="100%" alt="Integrated SILS runtime environment">
 </p>
 
-<p align="center">
+<div align="center">
 
   Integrated SILS runtime environment
-</p>
+
+</div>
 
 <!--
 <p align="center">
