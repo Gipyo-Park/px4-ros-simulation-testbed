@@ -163,13 +163,18 @@ configuration.
 ## Automated Test Selection
 
 <p align="center">
-  <img src="./assets/images/active-sampling-workflow.png" width="100%" alt="Active sampling and reliability assessment workflow">
+  <img src="./assets/images/active-sampling-workflow.png" width="100%" alt="Test efficiency strategy workflow using adaptive sampling">
 </p>
+<div align="center">
 
-The evaluation workflow combines simulation data, Gaussian-process prediction,
-uncertainty estimation, and active sampling. New operating conditions are
-prioritized from the predicted response and uncertainty maps so that the safety
-envelope can be estimated with fewer simulation cases.
+  #### Test efficiency strategy workflow using adaptive sampling
+
+</div>
+
+The evaluation workflow combines Gaussian-process prediction,
+uncertainty estimation, and active sampling. The new sampling
+prioritizes areas of high uncertainty, allowing for the safety
+envelope with fewer simulation samples.
 
 <p align="center">
   <img src="./assets/images/active-sampling-results.png" width="100%" alt="Active sampling prediction and comparison results">
