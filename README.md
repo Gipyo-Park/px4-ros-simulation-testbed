@@ -27,13 +27,14 @@ Operating conditions such as motor faults, wind disturbances, Controller options
 configured while flight states, control effort(or input), and tracking error are
 collected for post-processing.
 
+
+
 <p align="center">
   <img src="./assets/images/integrated-sils-environment.png" width="100%" alt="Integrated SILS runtime environment">
 </p>
-
 <div align="center">
 
-  ### Integrated SILS runtime environment
+  #### Integrated SILS runtime environment
 
 </div>
 
