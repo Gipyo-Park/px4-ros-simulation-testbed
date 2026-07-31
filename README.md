@@ -115,7 +115,7 @@ For more details, please refer to https://github.com/PX4/PX4-SITL_gazebo-classic
 ### Attainable Control Set (ACS)
 
 <p align="center">
-  <img src="./assets/images/control-authority-analysis.png" width="100%" alt="Comparison of ACS in fault and normal state">
+  <img src="./assets/images/attainable-control-set.png" width="100%" alt="Comparison of ACS in fault and normal state">
 </p>
 <div align="center">
 
@@ -148,11 +148,11 @@ Performance and safety of the multirotor are evaluated under various failure and
 
 #### Double Motor Failures Under Different Conditions (No. 1, 5)
 
-<img src="./assets/images/safety-envelope-double-fault-critical.png" width="100%" alt="Safety envelope with a double-motor fault (No. 1, 5)">
+<img src="./assets/images/safety-envelope-double-fault_1,5.png" width="100%" alt="Safety envelope with a double-motor fault (No. 1, 5)">
 
 #### Double Motor Failures Under Different Conditions (No. 3, 8)
 
-<img src="./assets/images/safety-envelope-double-fault-tolerant.png" width="100%" alt="Safety envelope with a double-motor fault (No. 3, 8)">
+<img src="./assets/images/safety-envelope-double-fault_3,8.png" width="100%" alt="Safety envelope with a double-motor fault (No. 3, 8)">
 
 </details>
 
