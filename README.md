@@ -123,15 +123,17 @@ For more details, please refer to https://github.com/PX4/PX4-SITL_gazebo-classic
 
 </div>
 
+
 The available roll, pitch, yaw moment, and thrust domains are compared under normal and failure conditions.
 The resulting geometry provides a direct view
 of how a fault changes the available ACS.
 
+
+
 ### Safety-Performance Envelope
 
-Tracking error and feasible control margin are evaluated over a wind-condition
-grid. The resulting maps show where the vehicle can maintain the required
-tracking and control performance.
+Performance and safety of the multirotor are evaluated under various failure and wind conditions.
+
 
 <p align="center">
   <img src="./assets/images/safety-envelope-nominal.png" width="100%" alt="Nominal safety performance envelope">
