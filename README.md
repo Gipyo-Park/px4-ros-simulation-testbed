@@ -87,9 +87,10 @@ plugin.
 </p>
 <div align="center">
 
-  #### Wind-disturbance demonstration (Left: Simulink scope for evaluation)
+  #### Wind-disturbance demonstration
 
 </div>
+
 
 
 <details>
@@ -108,17 +109,23 @@ For more details, please refer to https://github.com/PX4/PX4-SITL_gazebo-classic
 
 </details>
 
-## Control Authority & Performance Evaluation
 
-### Control Allocation Space
+## Attainable Control Set & Safety Performance Evaluation
+
+### Attainable Control Set (ACS)
 
 <p align="center">
-  <img src="./assets/images/control-authority-analysis.png" width="100%" alt="Nominal and faulty control authority comparison">
+  <img src="./assets/images/control-authority-analysis.png" width="100%" alt="Comparison of ACS in fault and normal state">
 </p>
+<div align="center">
 
-Nominal and faulty actuator configurations are compared in the roll, pitch,
-yaw-moment, and thrust domains. The resulting geometry provides a direct view
-of how a fault changes the available control-authority envelope.
+  #### Comparison of ACS in fault and normal state
+
+</div>
+
+The available roll, pitch, yaw moment, and thrust domains are compared under normal and failure conditions.
+The resulting geometry provides a direct view
+of how a fault changes the available ACS.
 
 ### Safety-Performance Envelope
 
